@@ -21,17 +21,13 @@ https://adresse.data.gouv.fr/data/ban/adresses/latest/csv/
 Étapes réalisées :
 
 - Exploration dans DBeaver (types, doublons, valeurs manquantes)
-
 - Import du CSV dans une table brute PostgreSQL :
 
 CREATE TABLE public.adresses (...);  
 
-
 - Inspection :
 
 SELECT * FROM public.adresses LIMIT 20;
-
-
 Identification des entités : voie / commune / adresse / position / parcelle
 
 ### 2. Modélisation MERISE
@@ -39,11 +35,11 @@ Identification des entités : voie / commune / adresse / position / parcelle
 Lien  du dictionnaire de données :
 https://docs.google.com/spreadsheets/d/1w5XGE2t59c0Kw8s8UZLy88FTr8EOuM9KCD-3cniLWks/edit?usp=sharing
 
-[etape-2/MCD.png]
+[](etape-2/MCD.png)
 
-[[etape-2/MLD.png]]
+[](etape-2/MLD.png)
 
-[[etape-2/MPD.png]]
+[](etape-2/MPD.png)
 
 ### 3. Création des tables (MPD)
 
@@ -55,7 +51,6 @@ CREATE TABLE commune ( ... );
 CREATE TABLE adresse ( ... );
 CREATE TABLE parcelle (...);
 CREATE TABLE adresse_parcelle (...);
-
 
 Les clés étrangères utilisent des ON DELETE CASCADE garantissant la cohérence lors des suppressions.
 
